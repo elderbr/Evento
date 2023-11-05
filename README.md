@@ -15,4 +15,11 @@ blocos de horários (por exemplo: um curso de HTML pode ocorrer em dois blocos, 
 armazenar o dia e os horários de início de fim do bloco daquele dia). Para cada participante, deseja-se
 cadastrar seu nome e email.
 
+---
+
 ![Classes](https://github.com/elderbr/assets/blob/main/DevSuperior/JavaSpringProfissional/Modulo/diagrama_class.png)
+
+---
+
+### Instância dos dados para seeding
+![Instância](https://github.com/elderbr/assets/blob/main/DevSuperior/JavaSpringProfissional/Modulo/povoada.png)
