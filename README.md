@@ -15,4 +15,4 @@ blocos de horários (por exemplo: um curso de HTML pode ocorrer em dois blocos, 
 armazenar o dia e os horários de início de fim do bloco daquele dia). Para cada participante, deseja-se
 cadastrar seu nome e email.
 
-![Classes]('blob:https://github.com/14e2b4e5-b661-4572-bb8b-b84acf5baffd')
+![Classes]('https://github.com/elderbr/assets/blob/main/DevSuperior/JavaSpringProfissional/Modulo/diagrama_class.png')
