@@ -2,6 +2,9 @@ package com.elderbr.evento.entities;
 
 import jakarta.persistence.*;
 
+import java.util.HashSet;
+import java.util.Set;
+
 @Entity
 @Table(name = "tb_atividade")
 public class Atividade {
@@ -11,6 +14,20 @@ public class Atividade {
     private String nome;
     private String descricao;
     private double preco;
+
+    @ManyToOne
+    @JoinColumn(name = "categoria_id")
+    private Categoria categorias;
+
+    @OneToMany(mappedBy = "atividades")
+    private Set<Bloco> blocos = new HashSet<>();
+
+    @ManyToMany
+    @JoinTable(name = "tb_atividade_participante",
+            joinColumns = @JoinColumn(name = "atividade_id"),
+            inverseJoinColumns = @JoinColumn(name = "participante_id")
+    )
+    private Set<Participante> participantes = new HashSet<>();
 
     public Atividade() {
     }
@@ -52,5 +69,21 @@ public class Atividade {
 
     public void setPreco(double preco) {
         this.preco = preco;
+    }
+
+    public Categoria getCategorias() {
+        return categorias;
+    }
+
+    public void setCategorias(Categoria categorias) {
+        this.categorias = categorias;
+    }
+
+    public Set<Bloco> getBlocos() {
+        return blocos;
+    }
+
+    public Set<Participante> getParticipantes() {
+        return participantes;
     }
 }
