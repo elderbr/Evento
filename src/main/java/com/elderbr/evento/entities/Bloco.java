@@ -59,4 +59,19 @@ public class Bloco {
     public void setAtividades(Atividade atividades) {
         this.atividades = atividades;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Bloco bloco = (Bloco) o;
+
+        return id == bloco.id;
+    }
+
+    @Override
+    public int hashCode() {
+        return id;
+    }
 }
