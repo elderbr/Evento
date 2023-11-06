@@ -2,7 +2,9 @@ package com.elderbr.evento.entities;
 
 import jakarta.persistence.*;
 
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 @Entity
@@ -20,7 +22,7 @@ public class Atividade {
     private Categoria categorias;
 
     @OneToMany(mappedBy = "atividades")
-    private Set<Bloco> blocos = new HashSet<>();
+    private List<Bloco> blocos = new ArrayList<>();
 
     @ManyToMany
     @JoinTable(name = "tb_atividade_participante",
@@ -79,7 +81,7 @@ public class Atividade {
         this.categorias = categorias;
     }
 
-    public Set<Bloco> getBlocos() {
+    public List<Bloco> getBlocos() {
         return blocos;
     }
 
